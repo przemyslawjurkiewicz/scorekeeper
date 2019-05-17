@@ -1,5 +1,5 @@
 import React from 'react';
-import Player from '../player/Player';
+import Player from '../Player/Player';
 import './PlayerList.css';
 
 const PlayerList = (props) => (

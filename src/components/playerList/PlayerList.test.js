@@ -1,5 +1,5 @@
 import PlayerList from './PlayerList';
-import Player from '../player/Player';
+import Player from '../Player/Player';
 import React from 'react';
 import { shallow } from 'enzyme';
 
