@@ -1,0 +1,30 @@
+.Player {
+    display: flex;
+}
+
+.Player span {
+    text-align: center;
+    padding: 10px;
+    border: solid 1px #000;
+}
+
+.Player__name {
+    width: 150px;
+    text-transform: uppercase;
+}
+
+.Player__score {
+    width: 20px;
+    font-weight: bold;
+}
+
+.Player__button {
+    width: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(69, 124, 175);
+}
+
+.Player__button:last-of-type {
+    background-color: indianred;
+}

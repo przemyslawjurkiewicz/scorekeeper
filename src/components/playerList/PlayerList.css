@@ -1,0 +1,11 @@
+.PlayerList {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.PlayerList li:nth-child(even) {
+    background-color: azure;
+}
