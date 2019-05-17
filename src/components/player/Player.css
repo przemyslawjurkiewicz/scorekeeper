@@ -3,22 +3,27 @@
 }
 
 .Player span {
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 10px;
     border: solid 1px #000;
 }
 
 .Player__name {
-    width: 150px;
+    width: 200px;
+    word-wrap: break-word;
     text-transform: uppercase;
 }
 
 .Player__score {
+    display: flex;
     width: 20px;
     font-weight: bold;
 }
 
 .Player__button {
+    display: flex;
     width: 20px;
     font-weight: bold;
     cursor: pointer;
