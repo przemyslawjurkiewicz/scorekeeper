@@ -1,0 +1,18 @@
+.AddPlayer {
+    display: flex;
+    margin: 10px;
+}
+
+.AddPlayer__input {
+    width: 200px;
+    height: 30px;
+
+}
+
+.AddPlayer__submit {
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(69, 124, 175);
+}

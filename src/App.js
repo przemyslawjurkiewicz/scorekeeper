@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import PlayerList from './components/PlayerList/PlayerList';
+import PlayerList from './components/playerList/PlayerList';
+import AddPlayer from './components/addPlayer/AddPlayer';
 
 class App extends Component {
   constructor() {
@@ -21,10 +22,22 @@ class App extends Component {
       })
     })
   }
+  
+  onPlayerAdd = (playerName) => {
+    const newPlayer = {
+      name: playerName,
+      score: 0,
+    }
+    this.setState({
+      players: [...this.state.players, newPlayer]
+    })
+  }
+
 
   render() {
     return (
       <div className='App'>
+        <AddPlayer onPlayerAdd={this.onPlayerAdd} />
         <PlayerList players={this.state.players} onScoreUpdate={this.onScoreUpdate} />
       </div>
     );
