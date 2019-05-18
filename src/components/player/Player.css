@@ -32,4 +32,5 @@
 
 .Player__button:last-of-type {
     background-color: indianred;
+    width: 50px;
 }
