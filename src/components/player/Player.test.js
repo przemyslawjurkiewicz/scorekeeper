@@ -1,6 +1,6 @@
 import Player from './Player';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 it('renders without crashing', () => {
     shallow(<Player />);
@@ -8,9 +8,9 @@ it('renders without crashing', () => {
 
 it('renders correct name', () => {
     const playerNamePassed = 'Ania';
-    const playerComponent = shallow(<Player name={playerNamePassed} />);
+    const playerComponent = mount(<Player name={playerNamePassed} />);
 
-    const playerNameRendered = playerComponent.find('.Player__name').text();
+    const playerNameRendered = playerComponent.find('.Player__name').getDOMNode().value;
 
     expect(playerNameRendered).toEqual(playerNamePassed);
 });
@@ -39,9 +39,20 @@ it('should call onPlayerScoreChange with 1 when plus button is clicked', () => {
     const mockedOnPlayerScoreChange = jest.fn();
     const playerComponent = shallow(<Player onPlayerScoreChange={mockedOnPlayerScoreChange} />);
   
-    const minusButton = playerComponent.find('.Player__button').last();
+    const minusButton = playerComponent.find('.Player__button').at(1);
   
     minusButton.simulate('click');
   
     expect(mockedOnPlayerScoreChange).toBeCalledWith(-1);
+  });
+
+  it('should call onPlayerRemove when delete button is clicked', () => {
+    const mockedOnPlayerRemove = jest.fn();
+    const playerComponent = shallow(<Player onPlayerRemove={mockedOnPlayerRemove} />);
+  
+    const deleteButton = playerComponent.find('.Player__button').last();
+  
+    deleteButton.simulate('click');
+  
+    expect(mockedOnPlayerRemove).toBeCalledWith();
   });
