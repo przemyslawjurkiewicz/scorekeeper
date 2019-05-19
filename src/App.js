@@ -12,7 +12,6 @@ class App extends Component {
     };
   }
 
- 
   onScoreUpdate = (playerIndex, scoreChange) => {
     this.setState({
       players: this.state.players.map((player, index) => {
@@ -21,7 +20,7 @@ class App extends Component {
         }
         return player;
       })
-    })
+    });
   };
 
   onPlayerAdd = playerName => {
@@ -52,10 +51,14 @@ class App extends Component {
     });
   };
 
-  render() {
+  sortPlayers = () => {
     this.state.players.sort(function(a, b) {
       return a.score > b.score ? -1 : b.score > a.score ? 1 : 0;
-    });
+    })
+  }
+
+  render() {
+    this.sortPlayers();
     return (
       <div className="App">
         <AddPlayer onPlayerAdd={this.onPlayerAdd} />
