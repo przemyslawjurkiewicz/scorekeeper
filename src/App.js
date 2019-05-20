@@ -39,8 +39,8 @@ class App extends Component {
     });
   };
 
-  changePlayerName = (playerIndex, event) => {
-    let value = event.target.value;
+  changePlayerName = (playerIndex, target) => {
+    let value = target.value;
     this.setState({
       players: this.state.players.map((player, index) => {
         if (index === playerIndex) {
@@ -52,8 +52,8 @@ class App extends Component {
   };
 
   sortPlayers = () => {
-    this.state.players.sort(function(a, b) {
-      return a.score > b.score ? -1 : b.score > a.score ? 1 : 0;
+    this.state.players.sort((a, b) => {
+      return b.score - a.score
     })
   }
 
