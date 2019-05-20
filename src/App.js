@@ -60,7 +60,7 @@ class App extends Component {
   render() {
     this.sortPlayers();
     return (
-      <div className="App">
+      <div className='App'>
         <AddPlayer onPlayerAdd={this.onPlayerAdd} />
         <PlayerList
           players={this.state.players}

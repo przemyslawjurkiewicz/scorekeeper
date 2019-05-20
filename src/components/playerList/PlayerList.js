@@ -3,7 +3,7 @@ import Player from '../player/Player';
 import './PlayerList.css';
 
 const PlayerList = props => (
-  <ul className="PlayerList">
+  <ul className='PlayerList'>
     {props.players.map((player, i) => (
       <Player
         key={i}

@@ -11,9 +11,9 @@ const AddPlayer = (props) => {
     let input;
     
     return (
-        <form className="AddPlayer" onSubmit={onSubmit}>
-            <input type="text" className="AddPlayer__input" placeholder="Enter name" ref={(node) => input = node} />
-            <input type="submit" className="AddPlayer__submit" value="Add" />
+        <form className='AddPlayer' onSubmit={onSubmit}>
+            <input type='text' className='AddPlayer__input' placeholder='Enter name' ref={(node) => input = node} />
+            <input type='submit' className='AddPlayer__submit' value='Add' />
         </form>
     )
 };
